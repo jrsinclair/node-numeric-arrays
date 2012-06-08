@@ -14,5 +14,8 @@
     "node": "*"
   },
   "homepage" : "https://github.com/jrsinclair/node-numeric-arrays",
-  "url" : "git://github.com/jrsinclair/node-numeric-arrays.git"
+  "repository" : {
+    "type" : "git"
+  , "url" : "git://github.com/jrsinclair/node-numeric-arrays.git"
+  }
 }
