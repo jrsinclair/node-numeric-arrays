@@ -1,7 +1,7 @@
 {
   "author": "James Sinclair <jrsinclair@gmail.com>",
   "name": "numeric_arrays",
-  "description": "Provides a library of utility mixins for extending JavaScript arrays (whithout extending prototypes)",
+  "description": "Provides a library of utility mixins for dealing with numeric arrays in JavaScript (without extending prototypes)",
   "version": "0.0.0",
   "main": "numeric_arrays.js",
   "scripts": {
