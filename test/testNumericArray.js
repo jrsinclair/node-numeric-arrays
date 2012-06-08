@@ -15,8 +15,8 @@
     var arr, funcs;
     arr = [];
     funcs = [
-      'sum', 'mean', 'stddevpop', 'stddev', 'max', 'min', 'add', 'pad',
-      'multiply', 'dot'
+      'sum', 'mean', 'stddevpop', 'stddev', 'max', 'min', 'add', 'subtract',
+      'pad', 'multiply', 'dot'
     ];
     NA.extend(arr);
     function test_func_exists(funcname) {
@@ -162,6 +162,22 @@
     test.done();
   }
   exports['add() should sum two arrays together'] = testAddAddsTwoArrays;
+
+  function testSubtractGivesDifferenceOfTwoArrays(test) {
+    var arr, added;
+    arr   = NA.extend([1, 1, 1]);
+    added = arr.subtract([1, 1, 1]);
+    test.same([0, 0, 0], added.slice(0));
+
+    added = NA.extend([0, 0, 0]).subtract([1, 1, 1]);
+    test.same([-1, -1, -1], added.slice(0));
+
+    added = NA.extend([-1, 0, 1]).subtract([1, 0, -1]);
+    test.same([-2, 0, 2], added.slice(0));
+    test.done();
+  }
+  exports['subtract() should subtract one array from another']
+    = testSubtractGivesDifferenceOfTwoArrays;
 
   function testAddPadsOutWithZeros(test) {
     var arr;

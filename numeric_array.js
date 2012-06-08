@@ -7,6 +7,15 @@
   var extend, exported_functions;
 
   /**
+   * Strip
+   *
+   * Return a copy of the array without extensions
+   */
+  function strip() {
+    return this.slice(0);
+  }
+
+  /**
    * Return the sum of an array
    */
   function sum() {
@@ -111,6 +120,22 @@
   }
 
   /**
+   * Subtract one array from another
+   */
+  function subtract(arr) {
+
+    // Make sure arrays are equal length
+    arr = _padToEqualLengths.call(this, arr);
+
+    // Add the two arrays
+    function add_together(val, idx) {
+      this[idx] -= val;
+    }
+    arr.forEach(add_together, this);
+    return this;
+  }
+
+  /**
    * Multiply
    *
    * Multiply two arrays, element by element
@@ -136,7 +161,7 @@
   }
 
   exported_functions = [
-    sum, mean, stddevpop, stddev, max, min, pad, add, multiply, dot
+    sum, mean, stddevpop, stddev, max, min, pad, add, subtract, multiply, dot
   ];
 
   /**
