@@ -2,7 +2,7 @@
   "author": "James Sinclair <jrsinclair@gmail.com>",
   "name": "numeric_arrays",
   "description": "Provides a library of utility mixins for dealing with numeric arrays in JavaScript (without extending prototypes)",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "numeric_arrays.js",
   "scripts": {
     "test": "nodeunit test"
@@ -12,5 +12,7 @@
   "optionalDependencies": {},
   "engines": {
     "node": "*"
-  }
+  },
+  "homepage" : "https://github.com/jrsinclair/node-numeric-arrays",
+  "url" : "git://github.com/jrsinclair/node-numeric-arrays.git"
 }
