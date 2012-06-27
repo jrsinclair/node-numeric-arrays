@@ -5,7 +5,7 @@
 
 (function () {
   "use strict";
-  var NA = require('../numeric_array'),
+  var NA = require('../numeric_arrays'),
     exec = require('child_process').exec;
 
   /**
@@ -217,7 +217,7 @@
       test.ok((/is\sOK\.\s*$/m).test(stdout), "Errors in jslint:\n" + stdout);
       test.done();
     }
-    exec('jslint ' + __dirname + '/../numeric_array.js', check_jslint_result);
+    exec('jslint ' + __dirname + '/../numeric_arrays.js', check_jslint_result);
   }
   exports['File should pass JSLint check']
     = testFilesLintOK;
