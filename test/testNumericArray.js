@@ -208,6 +208,14 @@
   }
   exports['dot() should calculate dot product'] = testDotCalculatesDotProduct;
 
+  function testScaleMultipliesEachElement(test) {
+    var arr = NA.extend([1, 2, 3]).scale(2);
+    test.same([2, 4, 6], arr.slice(0));
+    test.done();
+  }
+  exports['scale() should multiply each element by scalar']
+    = testScaleMultipliesEachElement;
+
   function testFilesLintOK(test) {
     test.expect(1);
     function check_jslint_result(error, stdout, stderr) {

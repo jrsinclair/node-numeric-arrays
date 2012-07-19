@@ -160,8 +160,20 @@
     return extend(this.slice(0)).multiply(arr).sum();
   }
 
+  /**
+   * Multiply each element by a scalar value
+   */
+  function scale(val) {
+    function mul(x, idx) {
+      this[idx] = val * x;
+    }
+    this.forEach(mul, this);
+    return this;
+  }
+
   exported_functions = [
-    sum, mean, stddevpop, stddev, max, min, pad, add, subtract, multiply, dot
+    sum, mean, stddevpop, stddev, max, min, pad, add, subtract, multiply, dot,
+    scale
   ];
 
   /**
