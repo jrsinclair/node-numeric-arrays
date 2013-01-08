@@ -132,6 +132,12 @@ length.
 
     $A([1, 2, 3, 4]).multiply([2, 2, 2, 2]); // [2, 4, 6, 8]
 
+### Scale `scale(num)`
+
+Scales each element of the array by *num*.
+
+    $A([1, 2, 3]).scale(1.5); // [1.5, 3, 4.5]
+
 ### Dot Product `dot(arr)`
 
 Calculates the dot product of the array with *arr*. If one of the two arrays is
@@ -144,3 +150,4 @@ the same length.
 ### Strip `strip()`
 
 Returns a copy of the array stripped of its extended functionality.
+
